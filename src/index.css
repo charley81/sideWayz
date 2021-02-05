@@ -1,13 +1,20 @@
 @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300&display=swap');
 
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
 :root {
   --fontFamily: 'Raleway', sans-serif;
   --borderRadius: 3px;
   --maxWidth: 1100px;
+  --transition: all 0.3s linear;
   --primaryColor: #a6f0c6;
   --secondaryColor: #a98b98;
-  --colorLight: #f8f1f1;
-  --colorDark: #0f1123;
+  --lightColor: #f8f1f1;
+  --darkColor: #0f1123;
 }
 
 body {
@@ -15,4 +22,6 @@ body {
   line-height: 1.5;
   letter-spacing: 2px;
   font-size: 18px;
+  background-color: var(--lightColor);
+  color: var(--darkColor);
 }

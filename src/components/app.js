@@ -5,11 +5,11 @@ import Sidebar from './sidebar'
 
 function App() {
   return (
-    <div>
+    <>
       <Home />
-      <Modal />
-      <Sidebar />
-    </div>
+      {/* <Modal />
+      <Sidebar /> */}
+    </>
   )
 }
 
