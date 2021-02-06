@@ -1,9 +1,16 @@
 /** @jsxImportSource @emotion/react */
 import { css } from '@emotion/react'
 import React from 'react'
+import { FaTimes } from 'react-icons/fa'
 
 const Modal = () => {
-  return <div>modal</div>
+  return (
+    <div className="modal-overlay show-modal">
+      <div className="modal-container">
+        <h3>modal content</h3>
+      </div>
+    </div>
+  )
 }
 
 export default Modal
