@@ -8,7 +8,7 @@ import {
   FaUserFriends,
   FaFolderOpen,
   FaCalendarAlt,
-  FaWpform,
+  FaWpforms,
 } from 'react-icons/fa'
 
 export const links = [
@@ -40,7 +40,7 @@ export const links = [
     id: 5,
     url: '/documents',
     text: 'documents',
-    icon: <FaWpform />,
+    icon: <FaWpforms />,
   },
 ]
 
