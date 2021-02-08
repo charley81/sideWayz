@@ -1,15 +1,17 @@
-/** @jsxImportSource @emotion/react */
-import { css } from '@emotion/react'
+import React from 'react'
 import { links, social } from '../data'
 import { FaTimes } from 'react-icons/fa'
-import React from 'react'
+import { useGlobalContext } from '../context'
 
 const Sidebar = () => {
+  // destructure from value object in context
+  const { isSidebarOpen, closeSidebar } = useGlobalContext()
+
   return (
-    <aside className={`sidebar`}>
+    <aside className={`${isSidebarOpen ? 'sidebar show-sidebar' : 'sidebar'}`}>
       <div className="sidebar-header">
         <h3 className="logo">sideWayz</h3>
-        <button className="close-btn">
+        <button className="close-btn" onClick={closeSidebar}>
           <FaTimes />
         </button>
       </div>

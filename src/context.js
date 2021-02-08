@@ -5,7 +5,36 @@ const AppContext = React.createContext()
 // in this case only using one for provider
 // wrap the whole app in AppProvider
 const AppProvider = ({ children }) => {
-  return <AppContext.Provider value="whatup">{children}</AppContext.Provider>
+  const [isSidebarOpen, setIsSidebarOpen] = useState(false)
+  const [isModalOpen, setIsModalOpen] = useState(false)
+
+  const openSidebar = () => {
+    setIsSidebarOpen(true)
+  }
+  const closeSidebar = () => {
+    setIsSidebarOpen(false)
+  }
+  const openModal = () => {
+    setIsModalOpen(true)
+  }
+  const closeModal = () => {
+    setIsModalOpen(false)
+  }
+
+  return (
+    <AppContext.Provider
+      value={{
+        isSidebarOpen,
+        isModalOpen,
+        openSidebar,
+        openModal,
+        closeModal,
+        closeSidebar,
+      }}
+    >
+      {children}
+    </AppContext.Provider>
+  )
 }
 
 // custom hook here always start hook as use
