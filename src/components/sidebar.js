@@ -6,7 +6,7 @@ import React from 'react'
 
 const Sidebar = () => {
   return (
-    <aside className={`sidebar show-sidebar`}>
+    <aside className={`sidebar`}>
       <div className="sidebar-header">
         <h3 className="logo">sideWayz</h3>
         <button className="close-btn">

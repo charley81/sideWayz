@@ -2,8 +2,13 @@
 import { css } from '@emotion/react'
 import React from 'react'
 import { FaBars } from 'react-icons/fa'
+import { useGlobalContext } from '../context'
 
 const Home = () => {
+  // test out incoming context
+  const data = useGlobalContext()
+  console.log(data)
+
   return (
     <div
       css={css`
